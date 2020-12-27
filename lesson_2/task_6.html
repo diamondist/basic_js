@@ -1,0 +1,54 @@
+<!-- Реализовать функцию с тремя параметрами: ​ function mathOperation(arg1, arg2, operation)​
+,
+где ​
+arg1​ , ​ arg2 — значения аргументов, operation — строка с названием операции. В
+зависимости от переданного значения выполнить одну из арифметических операций
+(использовать функции из пункта 5) и вернуть полученное значение (применить ​ switch​ ). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_6</title>
+</head>
+<body>
+    <script>
+        function add(left, right) {
+            return left + right;
+        }
+
+        function sub(left, right) {
+            return left - right;
+        }
+
+        function mul(left, right) {
+            return left * right;
+        }
+
+        function div(left, right) {
+            return left / right;
+        }
+        function mathOperatioin(arg1, arg2, operation) {
+            switch (operation) {
+                case 'addition':
+                    return add(arg1, arg2);
+                    break;
+                case 'substraction':
+                    return sub(arg1, arg2);
+                    break;
+                case 'multiplication':
+                    return mul(arg1, arg2);
+                    break;
+                case 'division':
+                    return div(arg1, arg2);
+                    break;
+            }
+        }
+        
+        alert(mathOperatioin(5, 2, 'addition'));
+        alert(mathOperatioin(5, 2, 'substraction'));
+        alert(mathOperatioin(5, 2, 'multiplication'));
+        alert(mathOperatioin(5, 2, 'division'));
+    </script>
+</body>
+</html>

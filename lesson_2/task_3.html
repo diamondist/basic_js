@@ -1,0 +1,28 @@
+<!-- Объявить две целочисленные переменные — ​ a и ​ b и задать им произвольные начальные
+значения. Затем написать скрипт, который работает по следующему принципу:
+- если ​ a ​ и ​ b ​ положительные, вывести их разность;
+- если ​ а ​ и ​ b ​ отрицательные, вывести их произведение;
+- если ​ а ​ и ​ b ​ разных знаков, вывести их сумму;
+Ноль можно считать положительным числом. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_3</title>
+</head>
+<body>
+    <script>
+        let a = 5, b = -10, result
+        if (a >= 0 && b >=0) {
+            result = a - b;
+        } else if (a < 0 && b < 0) {
+            result = a * b;
+        } else {
+            result = a + b;
+        }
+        alert(result);
+    </script>
+</body>
+</html>
