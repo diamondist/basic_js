@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+<body>
+    <!-- Товары в корзине хранятся в массиве. Задачи:
+        a. Организовать такой массив для хранения товаров в корзине;
+        b. Организовать функцию ​ countBasketPrice​ , которая будет считать стоимость корзины. -->
+    <script>
+        // Тестовый набор товаров:
+        // debugger;
+        let item1 = {id: 1, name: 'testItem1', price: 100};
+        let item2 = {id: 2, name: 'testItem2', price: 150};
+        let item3 = {id: 3, name: 'testItem3', price: 120};
+        
+        function countBasketPrice(bskt) {
+            let total = 0;
+            for (item in bskt) {
+                total += bskt[item]['price'];
+            }
+            return total;
+        }
+
+        function test(test) {
+            console.log(test)
+        }
+
+        let basket = [];
+        basket.push(item1, item2, item3);
+        console.log(countBasketPrice(basket));
+    </script>
+</body>
+</html>
