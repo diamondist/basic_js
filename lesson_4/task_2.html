@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task_2</title>
+</head>
+<body>
+    <script>
+        // Перенести функционал подсчета корзины на объектно-ориентированную базу
+        
+        class Product {
+            constructor(id, name, price) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+            }
+        }
+
+        class Cart {
+            constructor(customerId) {
+                this.customerId = customerId;
+                this.products = [];
+                this.total = 0;
+            }
+            add(product) {
+                this.products.push(product);
+            }
+            __countTotal() {
+                for (let i = 0; i < this.products.length; i++) {
+                    this.total += this.products[i].price;
+                }
+            }
+            showCart() {
+                this.__countTotal();
+                for (let i = 0; i < this.products.length; i++) {
+                    console.log(`${i + 1}. ${this.products[i].name}\t\t$${this.products[i].price}`)
+                };
+                console.log(`Total:\t\t\t$${this.total}`)
+            }
+        }
+        
+        // Тестовые данные
+
+        const product1 = new Product(1, 'product1', 100);
+        const product2 = new Product(2, 'product2', 200);
+        const product3 = new Product(3, 'product3', 300);
+
+        const cart1 = new Cart(236745);
+        cart1.add(product1);
+        cart1.add(product2);
+        cart1.add(product3);
+        cart1.showCart();
+
+    </script>
+</body>
+</html>
