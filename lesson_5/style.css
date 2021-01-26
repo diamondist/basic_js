@@ -1,0 +1,27 @@
+.borderEdge {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    font-size: x-large;
+    -webkit-text-stroke-width: thick;
+}
+
+.blackCell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    background-color: blue;
+}
+
+.whiteCell {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    float: left;
+    background-color: lightgrey;
+}
